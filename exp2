@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Elements'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.star,
+              size: 50,
+              color: Colors.yellow,
+            ),
+            SizedBox(height: 20),
+            Image.asset(
+              'assets/flutter_logo.png', // Replace with your image asset path
+              width: 100,
+              height: 100,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Hello, Flutter!',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Custom Font',
+              style: TextStyle(
+                fontFamily: 'YourCustomFont', // Replace with your custom font
+                fontSize: 18,
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Text(
+                'Padded Text',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

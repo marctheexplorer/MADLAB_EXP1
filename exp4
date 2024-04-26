@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: CardLayout(),
+    );
+  }
+}
+
+class CardLayout extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Card Layout'),
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(16.0),
+        children: [
+          Card(
+            elevation: 5.0,
+            child: ListTile(
+              leading: Icon(Icons.star),
+              title: Text('Card 1'),
+              subtitle: Text('This is the first card'),
+              onTap: () {
+                // Add your onTap activity here
+                print('Card 1 tapped!');
+              },
+            ),
+          ),
+          SizedBox(height: 10),
+          Card(
+            elevation: 5.0,
+            child: ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text('Card 2'),
+              subtitle: Text('This is the second card'),
+              onTap: () {
+                // Add your onTap activity here
+                print('Card 2 tapped!');
+              },
+            ),
+          ),
+          SizedBox(height: 10),
+          Card(
+            elevation: 5.0,
+            child: ListTile(
+              leading: Icon(Icons.check),
+              title: Text('Card 3'),
+              subtitle: Text('This is the third card'),
+              onTap: () {
+                // Add your onTap activity here
+                print('Card 3 tapped!');
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
